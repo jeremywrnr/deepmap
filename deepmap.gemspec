@@ -18,7 +18,6 @@ Gem::Specification.new do |g|
 
   g.require_path = "lib/deepmap"
   g.files        = ["lib/deepmap/deepmap.rb", "readme.md"]
-  #g.add_development_dependency "rspec-mocks"
   g.add_development_dependency "rspec"
   g.add_development_dependency "rake"
 end
