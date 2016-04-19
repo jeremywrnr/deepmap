@@ -16,9 +16,9 @@ Gem::Specification.new do |g|
   g.homepage    = "http://github.com/jeremywrnr/deepmap"
   g.license     = "MIT"
 
-  g.require_path = "lib"
-  g.files        = Dir.glob("lib/**/*") + %w(readme.md)
-  g.add_development_dependency "rake"
-  g.add_development_dependency "rspec"
+  g.require_path = "lib/deepmap"
+  g.files        = ["lib/deepmap/deepmap.rb", "readme.md"]
+  g.add_development_dependency "rspec", "~> 0"
+  g.add_development_dependency "rake", "~> 0"
 end
 
