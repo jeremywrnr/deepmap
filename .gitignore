@@ -1,0 +1,4 @@
+*.lock
+*.swp
+*.swo
+*.gem
