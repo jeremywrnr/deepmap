@@ -30,12 +30,16 @@ needs to be passed in as a block (see usage).
 ```ruby
 irb(main):001:0> require 'deepmap'
 => true
+
 irb(main):002:0> test = { 1 => 4, 2 => [5, 6], 3 => { 4 => [1, 2, { 5 => 10 }] } }
 => {1=>4, 2=>[5, 6], 3=>{4=>[1, 2, {5=>10}]}}
+
 irb(main):003:0> test.deep_map {|i| i.to_i * 2 }
 => {2=>8, 4=>[10, 12], 6=>{8=>[2, 4, {10=>20}]}}
+
 irb(main):004:0> test.key_map {|i| i.to_i * 2 }
 => {2=>4, 4=>[5, 6], 6=>{8=>[1, 2, {10=>10}]}}
+
 irb(main):005:0> test.val_map {|i| i.to_i * 2 }
 => {1=>8, 2=>[10, 12], 3=>{4=>[2, 4, {5=>20}]}}
 ```
