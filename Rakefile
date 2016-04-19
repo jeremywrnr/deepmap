@@ -26,6 +26,7 @@ task :dev do
   system "filewatcher '**/*.rb' 'clear && rake'"
 end
 
+desc "Run DeepMap rspec tests"
 RSpec::Core::RakeTask.new(:spec) do |rake|
   rake.verbose = true
   rake.rspec_opts = "--color "
