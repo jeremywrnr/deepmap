@@ -45,7 +45,22 @@ irb(main):005:0> test.val_map {|i| i.to_i * 2 }
 ```
 
 Once you `require 'deepmap'`, you can call any of the three provided functions
-on any (existing or new!) hash or array, as demonstrated above.
+on any (existing or new!) hash or array, as demonstrated above. You can also
+use the (&:method) shortcut to call a method on each object concisely:
+
+```ruby
+irb(main):002:0> test = { 'a' => 'b', 'c' => ['d', 'e'], 'f' => { 'g' => ['h', 'i', { 'j' => 'k' }] } }
+=> {"a"=>"b", "c"=>["d", "e"], "f"=>{"g"=>["h", "i", {"j"=>"k"}]}}
+
+irb(main):003:0> test.deep_map(&:upcase)
+=> {"A"=>"B", "C"=>["D", "E"], "F"=>{"G"=>["H", "I", {"J"=>"K"}]}}
+
+irb(main):004:0> test.key_map(&:upcase)
+=> {"A"=>"b", "C"=>["d", "e"], "F"=>{"G"=>["h", "i", {"J"=>"k"}]}}
+
+irb(main):005:0> test.val_map(&:upcase)
+=> {"a"=>"B", "c"=>["D", "E"], "f"=>{"g"=>["H", "I", {"j"=>"K"}]}}
+```
 
 
 ## development / testing
@@ -72,5 +87,8 @@ This uses `rspec` and `rake` to run a suite of unit tests. To run the suite:
 
 ## todo
 
-- support better object mapping, like `#deep_map(:method) => #deep_map {|x| x.method }`
+- support key-val iteration in mapping over vals/keys. This would allow support
+  for mapping conditionally based on a key/value, even if you are iterating
+  over all values/keys (`key_map {|k, v| k > 0 ? k : v }`).
+
 
