@@ -11,8 +11,8 @@ Gem::Specification.new do |g|
   g.version     = DeepMap::Version
   g.platform    = Gem::Platform::RUBY
   g.date        = Time.now.strftime("%Y-%m-%d")
-  g.summary     = "nested hash/arrap function mapping"
-  g.description = "easily map functions over key/vals of nested hash/arrays objects (eg JSON)"
+  g.summary     = "Nested hash/array function mapping."
+  g.description = "Map functions over nested hash/arrays objects (e.g. JSON)."
   g.homepage    = "http://github.com/jeremywrnr/deepmap"
   g.license     = "MIT"
 
