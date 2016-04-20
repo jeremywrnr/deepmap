@@ -58,7 +58,7 @@ describe DeepMap do
       end
 
       it "maps block to each key" do
-        #expect(@dkey.key_map {|x| x.to_i + 1 }).to eq @dkeyout
+        expect(@dkey.key_map {|x| x.to_i + 1 }).to eq @dkeyout
       end
     end
   end
