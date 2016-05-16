@@ -4,6 +4,7 @@ deepmap
 
 [![Gem Version](https://badge.fury.io/rb/deepmap.svg)](https://badge.fury.io/rb/deepmap)
 [![Build Status](https://travis-ci.org/jeremywrnr/deepmap.svg?branch=master)](https://travis-ci.org/jeremywrnr/deepmap)
+[![Code Climate](https://codeclimate.com/github/jeremywrnr/deepmap/badges/gpa.svg)](https://codeclimate.com/github/jeremywrnr/deepmap)
 [![MIT](https://img.shields.io/npm/l/alt.svg?style=flat)](http://jeremywrnr.com/mit-license)
 
 
