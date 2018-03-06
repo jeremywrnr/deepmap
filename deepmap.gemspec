@@ -18,8 +18,8 @@ Gem::Specification.new do |g|
 
   g.require_path = "lib/deepmap"
   g.files        = ["lib/deepmap/deepmap.rb", "readme.md"]
-  g.add_development_dependency "rspec"
-  g.add_development_dependency "rake"
-  g.add_development_dependency "rufo"
+  g.add_development_dependency "rspec", "~> 0"
+  g.add_development_dependency "rake", "~> 0"
+  g.add_development_dependency "rufo", "~> 0"
 end
 
