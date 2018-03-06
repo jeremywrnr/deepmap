@@ -1,12 +1,9 @@
-deepmap
-=======
-
+# deepmap
 
 [![Gem Version](https://badge.fury.io/rb/deepmap.svg)](https://badge.fury.io/rb/deepmap)
 [![Build Status](https://travis-ci.org/jeremywrnr/deepmap.svg?branch=master)](https://travis-ci.org/jeremywrnr/deepmap)
 [![Code Climate](https://codeclimate.com/github/jeremywrnr/deepmap/badges/gpa.svg)](https://codeclimate.com/github/jeremywrnr/deepmap)
 [![MIT](https://img.shields.io/npm/l/alt.svg?style=flat)](http://jeremywrnr.com/mit-license)
-
 
 ## setup
 
@@ -16,15 +13,14 @@ deepmap
 
 Ruby gem that adds three methods to the Hash and Array classes. Overview:
 
-- `#deep_map` - apply block to each key and value in object
-- `#key_map` - apply block to each key in object
-- `#val_map` - apply block to each value in object
+* `#deep_map` - apply block to each key and value in object
+* `#key_map` - apply block to each key in object
+* `#val_map` - apply block to each value in object
 
 These may be useful when you want to apply a function to each value (or key or
 pair) of a complex nested object (such as the result of parsing a YAML or JSON
 file), which can have hashes or arrays as subfields. The function currently
 needs to be passed in as a block (see usage).
-
 
 ## usage
 
@@ -47,7 +43,7 @@ irb(main):005:0> test.val_map {|i| i.to_i * 2 }
 
 Once you `require 'deepmap'`, you can call any of the three provided functions
 on any (existing or new!) hash or array, as demonstrated above. You can also
-use the (&:method) shortcut to call a method on each object concisely:
+use the (`&:method`) shortcut to call a method on each object concisely:
 
 ```ruby
 irb(main):002:0> test = { 'a' => 'b', 'c' => ['d', 'e'], 'f' => { 'g' => ['h', 'i', { 'j' => 'k' }] } }
@@ -62,7 +58,6 @@ irb(main):004:0> test.key_map(&:upcase)
 irb(main):005:0> test.val_map(&:upcase)
 => {"a"=>"B", "c"=>["D", "E"], "f"=>{"g"=>["H", "I", {"j"=>"K"}]}}
 ```
-
 
 ## development / testing
 
@@ -85,11 +80,9 @@ This uses `rspec` and `rake` to run a suite of unit tests. To run the suite:
 
     rake
 
-
 ## todo
 
-- support key-val iteration in mapping over vals/keys. This would allow support
+* collison checking/warning/confirmation workflow
+* support key-val iteration in mapping over vals/keys. This would allow support
   for mapping conditionally based on a key/value, even if you are iterating
   over all values/keys (`key_map {|k, v| k > 0 ? k : v }`).
-
-
