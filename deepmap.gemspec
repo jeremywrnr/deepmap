@@ -20,5 +20,6 @@ Gem::Specification.new do |g|
   g.files        = ["lib/deepmap/deepmap.rb", "readme.md"]
   g.add_development_dependency "rspec"
   g.add_development_dependency "rake"
+  g.add_development_dependency "rufo"
 end
 
