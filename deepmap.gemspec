@@ -12,7 +12,7 @@ Gem::Specification.new do |g|
   g.platform    = Gem::Platform::RUBY
   g.date        = Time.now.strftime("%Y-%m-%d")
   g.summary     = "Nested hash/array function mapping."
-  g.description = "Map functions over nested hash/arrays objects (e.g. JSON)."
+  g.description = "Map functions over nested hash/arrays objects (e.g., YAML, JSON)."
   g.homepage    = "http://github.com/jeremywrnr/deepmap"
   g.license     = "MIT"
 
