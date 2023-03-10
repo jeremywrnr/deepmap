@@ -72,11 +72,11 @@ try running `gem install bundler`. Once that is done:
 Now, we should be able to build the gem locally. This will build the local
 deepmap gem and link it in your path, so you can playing around with `deepmap`.
 
-    rake build
+    bundle exec rake build
 
 This uses `rspec` and `rake` to run a suite of unit tests. To run the suite:
 
-    rake
+    bundle exec rake
 
 ## todo
 
@@ -84,3 +84,4 @@ This uses `rspec` and `rake` to run a suite of unit tests. To run the suite:
 * support key-val iteration in mapping over vals/keys. This would allow support
   for mapping conditionally based on a key/value, even if you are iterating
   over all values/keys (`key_map {|k, v| k > 0 ? k : v }`).
+
